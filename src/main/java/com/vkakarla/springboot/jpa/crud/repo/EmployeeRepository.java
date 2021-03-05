@@ -7,5 +7,6 @@ import com.vkakarla.springboot.jpa.crud.entities.Employee;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
-
+   
+	
 }

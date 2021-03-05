@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-@Table(name="employee", schema = "vkakarlapoc")
+@Table(name="employee")
 public class Employee implements Serializable {
     
 	/**

@@ -20,28 +20,28 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService employeeService;
 
-	@PostMapping(value = "/createEmployee")
+	@PostMapping(value = "/employee")
 	public ResponseEntity<Object> createEmployee(@RequestBody Employee employee) {
 
 		employeeService.createEmployee(employee);
 		return new ResponseEntity<Object>("Successfully Saved", HttpStatus.OK);
 	}
 
-	@GetMapping(value = "/readEmployee/{id}")
+	@GetMapping(value = "/employee/{id}")
 	public ResponseEntity<Object> getEmployee(@PathVariable Long id) {
 
 		Employee employee = employeeService.getEmployeeById(id);
 		return new ResponseEntity<Object>(employee, HttpStatus.OK);
 	}
 
-	@PutMapping(value = "/updateEmployee")
+	@PutMapping(value = "/employee")
 	public ResponseEntity<Object> updateEmployee(@RequestBody Employee employee) {
 
 		employeeService.updateEmployee(employee);
 		return new ResponseEntity<Object>("Successfully Updated", HttpStatus.OK);
 	}
 
-	@DeleteMapping(value = "/deleteEmployee/{id}")
+	@DeleteMapping(value = "/employee/{id}")
 	public ResponseEntity<Object> deleteEmployee(@PathVariable Long id) {
 
 		employeeService.deleteEmployee(id);
